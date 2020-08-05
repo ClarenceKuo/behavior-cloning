@@ -81,6 +81,7 @@ Here is a pair of mirrored image:
 
 ![](https://i.imgur.com/zWrGQA9.jpg)
 ![](https://i.imgur.com/sFCAvWy.jpg)
+
 And here is the cropping result:
 
 ![](https://i.imgur.com/1j2KTFi.jpg)
