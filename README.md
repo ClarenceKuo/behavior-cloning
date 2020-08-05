@@ -75,7 +75,17 @@ To capture my own driving behavior, I first played with the simulator to make su
 
 During the test run, I found that the car speed in autonomous mode is around 9 miles/hr and in order to make the steering factor aligned well, I recollected my data with speed limited to around 9 miles/her as well. In particular, the new collected data contained 2 laps in the middle of the road, 1 lap that contained fixing from wrong direction, and 1 reversed lap.
 
-Also, I double my input images with flipping. I mirrored all the images and negate their labels so that the input will contain equal number of left and right turns.
+Also, I doubled my input images with mirroring all the images and negating their labels so that the input will contain equal number of left and right turns. In addition, I cropped the image to retain only the road part to save more memory and remove uncessary information.
+
+Here is a pair of mirrored image:
+
+![](https://i.imgur.com/zWrGQA9.jpg)
+![](https://i.imgur.com/sFCAvWy.jpg)
+And here is the cropping result:
+
+![](https://i.imgur.com/1j2KTFi.jpg)
+![](https://i.imgur.com/lwLI7JI.jpg)
+
 
 After shuffling and seperating dataset into training and validation, The car can drive itself endlessly whithout running out of the road!
 
