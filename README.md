@@ -18,7 +18,7 @@ The model includes ELU layers to introduce nonlinearity while reduce the effect 
 
 The data is normalized in the model using a Keras lambda layer with equaiton:
 
-pixel = (pixcel/ 127.5) - 1. 
+pixel = (pixel/ 127.5) - 1. 
 
 ### Attempts to reduce overfitting in the model
 
