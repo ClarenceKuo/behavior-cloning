@@ -7,20 +7,6 @@ You can find the test video [here](https://youtu.be/Uq3W2EAp3pc)
 
 
 ---
-## Files Submitted & Code Quality
-
-
-### Submission includes functional code
-Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
-```sh
-python drive.py final.h5
-```
-
-### Submission code 
-
-- ```model.py``` : The training and model saving process of the CNN.
-- ```final.h5``` : The trained model weights.
-
 
 ## Model Architecture and Training Strategy
 
