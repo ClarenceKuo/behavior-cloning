@@ -35,15 +35,15 @@ Training data was chosen to keep the vehicle driving on the road. I used a combi
 
 ### Solution Design Approach
 
-My first step was using the famous convolution neural network model: LeNet-5 with the trained parameters because I thought it already contained low layer detections like edges or curves that I didn;t have to train from scratch.
+My first step was using the famous convolution neural network model: LeNet-5 with the pre-trained parameters because I thought it already contained low level detections like edges or curves so I didn't have to train from scratch.
 
-In order to evaluate how was the model , I split my image from center camera and steering angle data into a training and validation set. I found that my first model had both low mean squared error on the training set and the validation set. This implied that the model was underfitting. 
+In order to evaluate the model, I split my image from center camera and steering angle data into a training and validation set. I found that my first model had both low mean squared error on the training set and the validation set. This implied that the model was underfitting. 
 
-Therefore, I collect more data and observed that the loss from training and validation set drops smoothly. However, the model keep on failing to redurect with the correct angle on big turns, even if I feed more data on corner turning. Then I realize this might resulted from the insufficient parameters in my model. 
+Therefore, I collect more data and observed that the loss from training and validation set drops smoothly. However, the model keep on failing to redirect with the correct angle on big turns, even if I feed more data on corner turning. Then I realize this might resulted from the insufficient parameters in my model. 
 
 Then I changed my model to Nvidia's approach: 5 convolutional layer followed by 4 fully coneected layer.
 
-Training the new model again, the phenomenon of overfitting occured, which is low training loss and high validation loss, and my car keeps on shaking even the road is straight.  
+Training the new model, the phenomenon of overfitting occured, which is low training loss and high validation loss, and my car keeps on shaking even the road is straight.  
 The final step I took was to add a dropout layer after the last convolution layer. The immediately benifit was remarkable! The car drove smoothly even during turning.
 
 At the end of the process, the vehicle is able to drive autonomously around the track for no matter how many times without leaving the road.
@@ -69,7 +69,4 @@ And here is the cropping result:
 
 ![](https://i.imgur.com/1j2KTFi.jpg)
 ![](https://i.imgur.com/lwLI7JI.jpg)
-
-
-After shuffling and seperating dataset into training and validation, The car can drive itself endlessly whithout running out of the road!
 
