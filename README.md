@@ -7,19 +7,17 @@ The goal this project is to use a convolution neural network in Keras to clone m
 
 ## Model Architecture and Training Strategy
 
-### An appropriate model architecture has been employed
+### Summary
 
 My model consists of a convolution neural network with 5x5 filter sizes and depths between 24 and 64. The original model architecture is designed by Nvidia, which can be found [here](https://developer.nvidia.com/blog/deep-learning-self-driving-cars/).
 
-The model includes ELU layers to introduce nonlinearity while reduce the effect of dead nurons. 
+The model includes ELU layers to introduce nonlinearity while reduce the effect of dead nurons and contains dropout layer in order to reduce overfitting.
 
 The data is normalized in the model using a Keras lambda layer with equaiton:
 
 pixel = (pixel/ 127.5) - 1. 
 
-### Attempts to reduce overfitting in the model
-
-The model also contains dropout layers in order to reduce overfitting.
+### Detail
 
 Before the training start, the sample images are seperated into training and validation datasets with a ratio of 0.2. Afterwards, both datasets are passed into a generator for batched sample loading to reduce RAM accessing.
 
@@ -53,7 +51,7 @@ At the end of the process, the vehicle is able to drive autonomously around the 
 To capture my own driving behavior, I first played with the simulator to make sure I myself is familiar with the system and can be a good driver. Then I started developement cycle:
 
 1. Record for a few laps
-2. load the previous model wieghts and train
+2. load the previous model weights and train
 3. test run 
 
 During the test run, I found that the car speed in autonomous mode is around 9 miles/hr and in order to make the steering factor aligned well, I recollected my data with speed limited to around 9 miles/her as well. In particular, the new collected data contained 2 laps in the middle of the road, 1 lap that contained fixing from wrong direction, and 1 reversed lap.
