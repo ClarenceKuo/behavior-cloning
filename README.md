@@ -9,7 +9,7 @@ The goal this project is to use a convolution neural network in Keras to clone m
 
 ### Summary
 
-My model consists of a convolution neural network with 5x5 filter sizes and depths between 24 and 64. The original model architecture is designed by Nvidia, which can be found [here](https://developer.nvidia.com/blog/deep-learning-self-driving-cars/).
+My model consists of a convolution neural network with 5x5 filter sizes and depths between 24 and 64. The original model architecture is designed by Nvidia, which can be found [here](https://arxiv.org/pdf/1604.07316v1.pdf).
 
 The model includes ELU layers to introduce nonlinearity while reduce the effect of dead nurons and contains dropout layer in order to reduce overfitting.
 
